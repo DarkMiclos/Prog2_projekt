@@ -10,37 +10,35 @@ nav {
         padding: 0;
         font-size: 0;
     }
+
     li {
         display: inline-block;
         padding: 0 20px;
     }
+
     a {
         font-size: 16px;
         text-decoration: none;
         color: white;
         padding: 9px 25px;
         transition: all 0.4s ease-in-out 0s;
-
     }
-    #mobile-menu .bar {
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        transition: all 0.4s ease-in-out;
-        background-color: white;
-    }
+    
     a:hover {
         color: red;
     }
+
     #logo {
         color: white;
         cursor: pointer;
     }
+
     .nav-link-booking {
         border-radius: 25px;
         background-color: rgba(255, 0, 0, 1);
         transition: all 0.4s ease-in-out 0s;
     }
+    
     .nav-link-booking:hover {
         color: white;
         background-color: rgba(255, 0, 0, 0.8);
