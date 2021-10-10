@@ -15,5 +15,38 @@
             "runOptions": {
                 "runOn": "folderOpen"
             }
-        }]
+        },
+        {
+            "label": "Django: Run Server",
+            "type": "shell",
+            "command": "python manage.py runserver",
+            "options": {
+                "cwd": "${workspaceFolder}",
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+            },
+            "runOptions": {
+                "runOn": "folderOpen",
+            },
+        },
+        {
+            "label": "Launch Brave",
+            "type": "shell",
+            "command": "brave.exe http://localhost:8000/",
+            "options": {
+                "cwd": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application",
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+            },
+            "runOptions": {
+                "runOn": "folderOpen",
+            },
+        },
+    ]
     }
