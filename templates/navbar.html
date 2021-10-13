@@ -10,16 +10,16 @@
         </div>
         <ul class = "nav__links">
             <li class = "nav__link">
-                <a href="">Otthon</a>
+                <a href="/">Otthon</a>
             </li>
             <li class = "nav__link">
                 <a href="{% url 'gallery' %}">Galéria</a>
             </li>
             <li class = "nav__link">
-                <a href="">Elérhetőség</a>
+                <a href="{% url 'contact' %}">Elérhetőség</a>
             </li>
             <li class = "nav__link">
-                <a href="" class = "nav-link-booking">Foglalás</a>
+                <a href="{% url 'booking' %}" class = "nav-link-booking">Foglalás</a>
             </li>
         </ul>
     </nav>
