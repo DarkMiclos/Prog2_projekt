@@ -2,13 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return render(request, "home.html", {})
+    return render(request, "layouts/home.html", {})
 
 def gallery(request):
-    return render(request, "gallery.html")
+    return render(request, "layouts/gallery.html")
 
 def contact(request):
-    return render(request, "contact.html")
+    return render(request, "layouts/contact.html")
 
 def booking(request):
-    return render(request, "booking.html")
+    return render(request, "layouts/booking.html")
