@@ -1,0 +1,24 @@
+{
+  "name": "weblap",
+  "version": "1.0.0",
+  "description": "* Clone the repository\r * Install dart [sass](https://sass-lang.com/dart-sass \"sass\")\r * Add dart sass to path: <https://stackoverflow.com/questions/51571814/how-to-install-dart-sass>\r * If you are using vscode install the blade runner extension to auto compile sass into css. Or use the command `sass --watch styles.scss styles.css`\r * Run the server with `python manage.py runserver`",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarkMiclos/Prog2_projekt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarkMiclos/Prog2_projekt/issues"
+  },
+  "homepage": "https://github.com/DarkMiclos/Prog2_projekt#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^27.2.5"
+  }
+}
