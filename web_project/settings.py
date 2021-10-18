@@ -139,3 +139,5 @@ if DEBUG:
     import mimetypes
     mimetypes.add_type('application/javascript', '.js', True)
     #for javascript modules
+    STRIPE_PUBLISHABLE_KEY = "pk_test_51JH0reCg3BeqzEoVyNSID5KvguOO3cf0m1EWhGamw66moBT57ZckCP8EE5pa00L7DBUKxvZI5fIV6PFlqCRB6agh00XLqSENaC"
+    STRIPE_SECRET_KEY = "sk_test_51JH0reCg3BeqzEoVU0Uo2HJ8s6v2xTRbHAdz9Xyqyo4YSlIFDDMAHdB5uWg8g0PFGEM7xzT62s8JtecnGN24tEM90001ojj3Wv"
