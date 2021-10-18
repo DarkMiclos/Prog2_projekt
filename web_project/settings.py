@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     #own
     'pages',
+    'payments',
 ]
 
 MIDDLEWARE = [
