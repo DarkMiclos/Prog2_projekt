@@ -20,6 +20,6 @@ class Product(models.Model):
         verbose_name = 'price',
         validators = [
             validators.MinValueValidator(50),
-            validators.MinValueValidator(100000)
+            validators.MaxValueValidator(100000)
         ]
     )
