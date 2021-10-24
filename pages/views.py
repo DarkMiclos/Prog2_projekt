@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from payments.models import Product
+
 def home(request):
     return render(request, "layouts/home.html", {})
 
@@ -11,4 +13,8 @@ def contact(request):
     return render(request, "layouts/contact.html")
 
 def booking(request):
-    return render(request, "layouts/booking.html")
+    products = Product.objects.all()
+    data = {
+        'products': products
+    }
+    return render(request, "layouts/booking.html", data)

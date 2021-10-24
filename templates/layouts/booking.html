@@ -1,15 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="{% static 'javascript/modules/stripe.js' %}"></script>
     <title>Document</title>
 </head>
 <body>
     {% block navbar %}
     {% include "components/navbar.html" %}
     {% endblock navbar %}
-    Booking page
+    <button id="checkout-button">Foglalás</button>
+    {% for product in products %}
+    <h1>{{ product.price }}</h1>
+    {% endfor %}
 </body>
 </html>
