@@ -9,8 +9,13 @@ import stripe
 import json
 
 @csrf_exempt
-def create_checkout_session(request, id):
-    product = get_object_or_404(Product, pk = id)
+def stripe_config(request):
+    stripe_config = {'publicKey': settings.STRIPE_PUBLISHABLE_KEY}
+    return JsonResponse(stripe_config, safe=False)
+
+@csrf_exempt
+def create_checkout_session(request):
+    product = Product.objects.all()
     stripe.api_key = settings.STRIPE_SECRET_KEY
     checkout_session = stripe.checkout.Session.create(
         payment_method_types = ['card'],
@@ -19,9 +24,9 @@ def create_checkout_session(request, id):
                 'price_data': {
                     'currency': 'huf',
                     'product_data': {
-                    'name': product.name,
+                    'name': 'Foglalás',
                     },
-                    'unit_amount': int(product.price * 100),
+                    'unit_amount': '30000',
                 },
                 
                 'quantity': 1,
