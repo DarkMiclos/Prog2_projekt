@@ -1,0 +1,17 @@
+{% extends "layouts/home.html" %}
+{% load static %}
+{% block slideshow %}
+<div class="slideshow-container">
+    <div class="slides">
+        <img src="{% static 'images/gallery.jpg' %}" alt="Galéria">
+        <div class="text">Galéria</div>
+    </div>
+    <div class="slides">
+        <img src="{% static 'images/stairs.jpg' %}" alt="Lépcső">
+        <div class="text">Lépcső</div>
+    </div>
+    <div class="slides">
+        <img src="{% static 'images/bathroom.jpg' %}" alt="Fürdőszoba">
+    </div>
+</div>
+{% endblock slideshow %}
