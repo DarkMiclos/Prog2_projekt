@@ -1,17 +1,27 @@
-{% extends "layouts/home.html" %}
 {% load static %}
-{% block slideshow %}
 <div class="slideshow-container">
     <div class="slides">
-        <img src="{% static 'images/gallery.jpg' %}" alt="Galéria">
-        <div class="text">Galéria</div>
+        <img class = "img-slide" src="{% static 'images/test2.png' %}" alt="Galéria">
+        <div class="text">Test1</div>
     </div>
+
     <div class="slides">
-        <img src="{% static 'images/stairs.jpg' %}" alt="Lépcső">
-        <div class="text">Lépcső</div>
+        <img class = "img-slide"  src="{% static 'images/test1.jpg' %}" alt="Lépcső">
+        <div class="text">Test2</div>
     </div>
+
     <div class="slides">
-        <img src="{% static 'images/bathroom.jpg' %}" alt="Fürdőszoba">
+        <img class = "img-slide"  src="{% static 'images/test3.png' %}" alt="Fürdőszoba">
+        <div class="text">Test3</div>
+    </div>
+
+    <a class="prev" id = "previous-slide">&#10094;</a>
+    <a class="next" id = "next-slide">&#10095;</a>
+
+    <div class="bar-container">
+        <span class="slide-bar"></span>
+        <span class="slide-bar"></span>
+        <span class="slide-bar"></span>
     </div>
 </div>
-{% endblock slideshow %}
+<script src="{% static 'javascript/modules/slideshow.js' %}?{% now ' u'='' %}"></script>
