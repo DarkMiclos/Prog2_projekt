@@ -5,8 +5,6 @@ let nextSlide = document.getElementById("next-slide");
 let bars = document.getElementsByClassName("slide-bar");
 let slides = document.getElementsByClassName("slides");
 
-console.log(bars);
-
 showSlide(slideIndex);
 
 if(previousSlide)

@@ -1,5 +1,4 @@
 let imgPopup = document.getElementsByClassName("img-clicked");
-console.log(imgPopup);
 
 if(imgPopup)
 {
