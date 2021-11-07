@@ -1,6 +1,9 @@
 {% extends "./base.html" %}
 {% block content %}
 <div class="content">
-  Gallery page
+  {% for image in images %}
+  <p>{{ image.title }}</p>
+  <img src="/{{ image.image }}" alt="">
+  {% endfor %}
 </div>
 {% endblock content %}

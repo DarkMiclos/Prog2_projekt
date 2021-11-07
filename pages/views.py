@@ -1,13 +1,18 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from .models import Image
 from payments.models import Product
 
 def home(request):
-    return render(request, "layouts/home.html", {})
+    return render(request, "layouts/home.html")
 
 def gallery(request):
-    return render(request, "layouts/gallery.html")
+    images = Image.objects.all()
+    data = {
+        'images': images
+    }
+    return render(request, "layouts/gallery.html", data)
 
 def contact(request):
     return render(request, "layouts/contact.html")
