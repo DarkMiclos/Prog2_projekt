@@ -1,10 +1,12 @@
 {% extends "./base.html" %}
 {% load static %}
 {% block content %}
+<div class="content">
     <script src="https://js.stripe.com/v3/"></script>
     <button id="checkout-button">Foglalás</button>
     {% for product in products %}
     <h1>{{ product.price }}</h1>
     {% endfor %}
     <script src="{% static 'javascript/modules/stripe.js' %}"></script>
+</div>
 {% endblock content %}
