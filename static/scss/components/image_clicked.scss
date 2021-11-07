@@ -1,0 +1,36 @@
+.img-popup-container {
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+
+  .img-popup {
+    max-width: 80vw;
+    max-height: 80vh;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 3px;
+    cursor: pointer;
+    margin: 2em 1em 0 0;
+    background-color: white;
+    display: block;
+  }
+
+  #close-button-left {
+    transform: rotate(-45deg);
+  }
+  #close-button-right {
+    transform: rotate(45deg);
+  }
+}

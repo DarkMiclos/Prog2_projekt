@@ -1,17 +1,17 @@
 {% load static %}
 <div class="slideshow-container">
-    <div class="slides">
-        <img class = "img-slide" src="{% static 'images/test2.png' %}" alt="Galéria">
+    <div class="slides fade">
+        <img class = "img-slide img-clicked" src="{% static 'images/test2.png' %}" alt="Galéria">
         <div class="text">Test1</div>
     </div>
 
-    <div class="slides">
-        <img class = "img-slide"  src="{% static 'images/test1.jpg' %}" alt="Lépcső">
+    <div class="slides fade">
+        <img class = "img-slide img-clicked"  src="{% static 'images/test1.jpg' %}" alt="Lépcső">
         <div class="text">Test2</div>
     </div>
 
-    <div class="slides">
-        <img class = "img-slide"  src="{% static 'images/test3.png' %}" alt="Fürdőszoba">
+    <div class="slides fade">
+        <img class = "img-slide img-clicked"  src="{% static 'images/test3.png' %}" alt="Fürdőszoba">
         <div class="text">Test3</div>
     </div>
 
@@ -25,3 +25,4 @@
     </div>
 </div>
 <script src="{% static 'javascript/modules/slideshow.js' %}?{% now ' u'='' %}"></script>
+<script src="{% static 'javascript/modules/image_clicked.js' %}?{% now ' u'='' %}"></script>
