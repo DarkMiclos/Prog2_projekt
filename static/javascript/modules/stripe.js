@@ -9,7 +9,7 @@ fetch("/config/")
   if(checkoutButton)
   {
     checkoutButton.addEventListener('click', function() {
-      fetch("/create-checkout-session/")
+      fetch("{% url 'create_checkout_session' %}")
       .then((result) => 
         { 
           return result.json();

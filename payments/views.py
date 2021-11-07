@@ -1,12 +1,10 @@
 from django.http.response import JsonResponse
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse
 from django.conf import settings
-from stripe.api_resources import customer, line_item, payment_method, product
 from .models import *
 import stripe
-import json
 
 @csrf_exempt
 def stripe_config(request):
@@ -15,7 +13,7 @@ def stripe_config(request):
 
 @csrf_exempt
 def create_checkout_session(request):
-    product = Product.objects.all()
+    product = Product.objects.get(id = 1)
     stripe.api_key = settings.STRIPE_SECRET_KEY
     checkout_session = stripe.checkout.Session.create(
         payment_method_types = ['card'],
@@ -24,9 +22,9 @@ def create_checkout_session(request):
                 'price_data': {
                     'currency': 'huf',
                     'product_data': {
-                    'name': 'Foglalás',
+                    'name': product.name,
                     },
-                    'unit_amount': '30000',
+                    'unit_amount': int(product.price) * 100,
                 },
                 
                 'quantity': 1,
