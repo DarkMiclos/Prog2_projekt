@@ -3,3 +3,4 @@ styles.css.map
 node_modules/*
 __pycache__/
 *.py[cod]
+*.sqlite3
