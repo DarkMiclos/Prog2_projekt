@@ -1,9 +1,12 @@
 {% extends "./base.html" %}
+{% load static %}
 {% block content %}
 <div class="content">
   {% for image in images %}
-  <p>{{ image.title }}</p>
-  <img src="/{{ image.image }}" alt="">
+  <div class="gallery-image-container">
+    <img src="/{{ image.image }}" alt="{{ image.title }}" class="gallery-image img-clicked">
+  </div>
   {% endfor %}
 </div>
+<script src="{% static 'javascript/modules/image_clicked.js' %}?{% now ' u'='' %}"></script>
 {% endblock content %}
