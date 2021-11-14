@@ -1,4 +1,4 @@
-var checkoutButton = document.querySelector('#checkout-button');
+let checkoutButton = document.querySelector('#checkout-button');
 
 fetch("/config/")
 .then((result) => { return result.json(); })
@@ -9,7 +9,7 @@ fetch("/config/")
   if(checkoutButton)
   {
     checkoutButton.addEventListener('click', function() {
-      fetch("{% url 'create_checkout_session' %}")
+      fetch("/create-checkout-session")
       .then((result) => 
         { 
           return result.json();

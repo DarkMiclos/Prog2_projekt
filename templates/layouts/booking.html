@@ -7,6 +7,10 @@
     {% for product in products %}
     <h1>{{ product.price }}</h1>
     {% endfor %}
-    <script src="{% static 'javascript/modules/stripe.js' %}"></script>
+    <p>{{charge.name}}</p>
+    <form action="{{charge.hosted_url}}" method="get">
+        <button type="submit">Pay with cryptocurrency</button>
+    </form>
+    <script src="{% static 'javascript/modules/stripe.js' %}?{% now ' u'='' %}"></script>
 </div>
 {% endblock content %}

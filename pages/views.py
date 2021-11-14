@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from payments.views import coinbase_commerce_payment
 
 from .models import Image
 from payments.models import Product
@@ -19,7 +20,9 @@ def contact(request):
 
 def booking(request):
     products = Product.objects.all()
+    charge = coinbase_commerce_payment(request)
     data = {
-        'products': products
+        'products': products,
+        'charge': charge
     }
     return render(request, "layouts/booking.html", data)
