@@ -11,6 +11,8 @@
     <form action="{{charge.hosted_url}}" method="get">
         <button type="submit">Pay with cryptocurrency</button>
     </form>
+    <label for="number-of-days">Napok Száma:</label>
+    <input type="number" min="1" step="1" label = "number-of-days" value = "1"/>
     <script src="{% static 'javascript/modules/stripe.js' %}?{% now ' u'='' %}"></script>
 </div>
 {% endblock content %}
