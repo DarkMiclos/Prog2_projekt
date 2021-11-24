@@ -8,10 +8,11 @@ class Image(models.Model):
         return self.title
 
 class Event(models.Model):
-  title = models.CharField(max_length=200)
-  description = models.TextField()
-  start_time = models.DateTimeField()
-  end_time = models.DateTimeField()
+  name = models.CharField(max_length=200)
+  email = models.EmailField()
+  start_date = models.DateTimeField()
+  end_date = models.DateTimeField()
+  number_of_people = models.IntegerField()
 
   def __str__(self) -> str:
-      return self.title
+    return self.name

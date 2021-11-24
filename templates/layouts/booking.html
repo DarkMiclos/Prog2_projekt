@@ -13,6 +13,16 @@
     </form>
     <label for="number-of-days">Napok Száma:</label>
     <input type="number" min="1" step="1" label = "number-of-days" value = "1"/>
+    <div>
+        <button id="show-form">Show form</button>
+    </div>
+    <div id="booking-form">
+        <form action="." method="POST">{% csrf_token %}
+            {{ booking_form.as_p }}
+            <button class="submit">Submit</button>
+        </form>
+    </div>
     <script src="{% static 'javascript/modules/stripe.js' %}?{% now ' u'='' %}"></script>
+    <script src="{% static 'javascript/modules/show_booking_form.js' %}?{% now ' u'='' %}"></script>
 </div>
 {% endblock content %}

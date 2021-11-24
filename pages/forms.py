@@ -4,8 +4,7 @@ from django.forms.widgets import NumberInput
 
 class BookingForm(forms.Form):
   name = forms.CharField()
-  email = EmailField()
-  start_date = forms.DateField()
-  end_date = forms.DateField()
+  email = forms.EmailField()
+  start_date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
+  end_date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
   number_of_people = forms.IntegerField()
-  price = forms.IntegerField()
