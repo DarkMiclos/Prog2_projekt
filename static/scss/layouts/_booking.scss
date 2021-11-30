@@ -1,7 +1,88 @@
-#booking-form {
+.booking-product-container {
+  width: 100vw;
+  text-align: center;
+}
+
+#form-container {
   display: none;
+  position: absolute;
+  height: 60vh;
+  width: 40vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #181818;
+  border-radius: 25px;
+  z-index: 2;
+  opacity: .94;
+}
+
+#booking-form {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+#booking-form p {
+  margin: 0 0 1em 1em;
+  color: #efeff1;
+}
+
+.submit {
+  margin: 0 0 1em 1em;
+}
+
+button {
+  background-color: red;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5em 2em;
+  color: #efeff1;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.booking-product {
+  display: inline-block;
+  height: 30vw;
+  width: 30vw;
+  text-align: center;
+  background-color: #3d3d3d;
+  color: #efeff1;
+  border-radius: 25px;
+  margin: 1em;
+}
+
+input[type=text], input[type=email] {
+  width: 100%;
+  padding: 0.8em 1.6em;
+  margin: 0.5em 0;
+  border-radius: 4px;
+  background-color: #3d3d3d;
+  color: #efeff1;
+}
+
+input {
+  border: none;
+  width: 100%;
+  padding: 0.8em 1.6em;
+  margin: 0.5em 0;
+  border-radius: 4px;
+  background-color: #3d3d3d;
+  color: #efeff1;
+  border: transparent thin solid;
+  transition: all 0.4s ease-in-out;
+}
+
+input[type=date] {
+  cursor: pointer;
+}
+
+input:hover {
+  border: darkgrey thin solid;
 }

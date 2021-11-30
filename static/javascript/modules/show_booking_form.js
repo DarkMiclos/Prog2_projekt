@@ -1,5 +1,5 @@
 showFormBtn = document.getElementById("show-form");
-bookingForm = document.getElementById("booking-form");
+bookingForm = document.getElementById("form-container");
 
 console.log(showFormBtn);
 

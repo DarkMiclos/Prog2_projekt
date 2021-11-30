@@ -3,24 +3,30 @@
 {% block content %}
 <div class="content">
     <script src="https://js.stripe.com/v3/"></script>
-    <button id="checkout-button">Foglalás</button>
-    {% for product in products %}
-    <h1>{{ product.price }}</h1>
-    {% endfor %}
-    <p>{{charge.name}}</p>
-    <form action="{{charge.hosted_url}}" method="get">
-        <button type="submit">Pay with cryptocurrency</button>
-    </form>
-    <label for="number-of-days">Napok Száma:</label>
-    <input type="number" min="1" step="1" label = "number-of-days" value = "1"/>
+    <div class = "booking-product-container">
+        <div class="booking-product">
+            <button id="checkout-button">Foglalás</button>
+            {% for product in products %}
+            <p>{{ product.price }}</p>
+            {% endfor %}
+        </div>
+        <div class="booking-product">
+            <form action="{{charge.hosted_url}}" method="get">
+                <button type="submit">Pay with cryptocurrency</button>
+            </form>
+            <p>{{charge.name}}</p>
+        </div>
+    </div>
     <div>
         <button id="show-form">Show form</button>
     </div>
-    <div id="booking-form">
-        <form action="." method="POST">{% csrf_token %}
-            {{ booking_form.as_p }}
-            <button class="submit">Submit</button>
-        </form>
+    <div id = "form-container">
+        <div id="booking-form">
+            <form action="." method="POST">{% csrf_token %}
+                {{ booking_form.as_p }}
+                <button class="submit">Submit</button>
+            </form>
+        </div>
     </div>
     <script src="{% static 'javascript/modules/stripe.js' %}?{% now ' u'='' %}"></script>
     <script src="{% static 'javascript/modules/show_booking_form.js' %}?{% now ' u'='' %}"></script>
